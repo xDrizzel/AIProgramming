@@ -1,6 +1,4 @@
-import copy
-
-from search_algorithms import breadth_first_search
+from search_algorithms import breadth_first_search, depth_first_search
 
 grid = [[5, 3, 0, 0, 7, 0, 0, 0, 0],
         [6, 0, 0, 1, 9, 5, 0, 0, 0],
@@ -56,6 +54,7 @@ def next_state(state):
     return states
 
 
+solution = depth_first_search(grid, next_state, is_goal)
 solution = breadth_first_search(grid, next_state, is_goal)
 for row in solution[-1]:
     print(row)
