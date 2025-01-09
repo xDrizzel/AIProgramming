@@ -1,6 +1,6 @@
-from search_algorithms import breadth_first_search
+from search_algorithms import breadth_first_search, depth_first_search
 
-n = 8
+n = 25
 
 
 def is_goal(state):
@@ -29,7 +29,7 @@ def check_diagonals(x, y, state):
     return True
 
 
-queens = breadth_first_search([], next_states, is_goal)
+queens = depth_first_search([], next_states, is_goal)
 board = []
 for i in range(n):
     board.append(["*"] * n)
