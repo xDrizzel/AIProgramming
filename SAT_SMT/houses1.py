@@ -23,3 +23,17 @@ s.add(Ger == 3)
 
 print(s.check())
 print(s.model())
+
+def unique(s, xs):
+    m = s.model()
+    for x in xs:
+        s.push()
+        s.add(x != m.eval(x, model_completion=True))
+        if s.check() == sat:
+            return False
+        s.pop()
+    return True
+
+xs = [Aus, Bra, Ger, Cat, Dog, Fish, Bas, Foot, Socc, Blue, Green, Red]
+
+print(unique(s, xs))

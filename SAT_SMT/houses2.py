@@ -22,3 +22,4 @@ s.add(Hand == White - 2)
 
 print(s.check())
 print(s.model())
+
